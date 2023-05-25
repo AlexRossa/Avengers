@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/xren.css">
+  <title>Quiz</title>
+  <link rel="icon" href="../images/aveng.png">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand">Avengers</a>
+    <span id="clock"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Characters.html">Characters</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Movies.html">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ass3aveng.html" >Background</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="quiz.html" >Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="BuyTicket.html">Tickets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Test.html">Test</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <h1 class="title">Quiz: Which Avenger Are You?</h1>
+  <div id="question1" class="question">
+    <p>Which of the following qualities describe you the best?</p>
+    <label><input type="radio" name="qualities" value="bravery"> Bravery</label><br>
+    <label><input type="radio" name="qualities" value="intelligence"> Intelligence</label><br>
+    <label><input type="radio" name="qualities" value="strength"> Strength</label><br>
+    <label><input type="radio" name="qualities" value="speed"> Speed</label><br>
+    <button onclick="nextQuestion(2)">Next</button>
+  </div>
+  <div id="question2" class="question" style="display: none;">
+    <p>Which superpower resonates with you the most?</p>
+    <label><input type="radio" name="superpower" value="flight"> Flight</label><br>
+    <label><input type="radio" name="superpower" value="telepathy"> Telepathy</label><br>
+    <label><input type="radio" name="superpower" value="invisibility"> Invisibility</label><br>
+    <label><input type="radio" name="superpower" value="superstrength"> SuperStrength</label><br>
+    <button onclick="previousQuestion(1)">Previous</button>
+    <button onclick="nextQuestion(3)">Next</button>
+  </div>
+  <div id="question3" class="question" style="display: none;">
+    <p>Which weapon would you choose to wield?</p>
+    <label><input type="radio" name="weapon" value="shield"> Shield</label><br>
+    <label><input type="radio" name="weapon" value="repulsor"> Repulsor Gauntlets</label><br>
+    <label><input type="radio" name="weapon" value="hammer"> Hammer</label><br>
+    <label><input type="radio" name="weapon" value="bow"> Bow and Arrow</label><br>
+    <button onclick="previousQuestion(2)">Previous</button>
+    <button onclick="nextQuestion(4)">Next</button>
+  </div>
+  <div id="question4" class="question" style="display: none;">
+    <p>Which color do you resonate with the most?</p>
+    <label><input type="radio" name="color" value="red"> Red</label><br>
+    <label><input type="radio" name="color" value="blue"> Blue</label><br>
+    <label><input type="radio" name="color" value="green"> Green</label><br>
+    <label><input type="radio" name="color" value="purple"> Purple</label><br>
+    <button onclick="previousQuestion(3)">Previous</button>
+    <button  onclick="showResult()" id="myButton">Show Result</button>
+  </div>
+  <div id="result" class="result" style="display: none;"></div>
+</div>
+<script src="../js/xren.js"></script>
+<script src="../js/time.js"></script>
+<script src="../js/quiz.js"></script>
+
+</body>
+</html>
